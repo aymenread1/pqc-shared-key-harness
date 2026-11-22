@@ -9,6 +9,8 @@ ARG RUST_STABLE=1.97.0
 ARG RUST_NIGHTLY=nightly-2026-05-01
 ARG LIBOQS_VERSION=0.14.0
 ARG OPENSSL_VERSION=3.5.4
+# Newest Bouncy Castle release, run beside the pinned 1.81 (java/pom.xml) to show whether the behaviour persists.
+ARG BC_LATEST=1.87
 # JDK 25 (LTS) supplies the JDK's own ML-DSA provider (JEP 497); "latest" GA build of 25,
 # the exact build is printed in every result line (java=...).
 ARG JDK25_URL=https://api.adoptium.net/v3/binary/latest/25/ga/linux/x64/jdk/hotspot/normal/eclipse
@@ -63,6 +65,8 @@ COPY . .
 
 # Fetch and build everything at image-build time so `docker run` needs no network.
 RUN cd java && mvn -q dependency:copy-dependencies -DoutputDirectory=lib && ls lib
+RUN cd java && (mvn -q dependency:copy -Dartifact="org.bouncycastle:bcprov-jdk18on:${BC_LATEST}" -DoutputDirectory=lib-bc-latest \
+      || echo "bcprov ${BC_LATEST} not available: BC-latest stages will be skipped") && ls lib-bc-latest || true
 RUN cd rust && cargo build --release --locked \
  && RUSTFLAGS="-Zsanitizer=thread" cargo "+${RUST_NIGHTLY}" build --release --locked -Zbuild-std \
       --target x86_64-unknown-linux-gnu --target-dir target/tsan --bins --examples

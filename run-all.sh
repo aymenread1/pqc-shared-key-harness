@@ -185,14 +185,20 @@ if command -v javac >/dev/null && [ -n "$CP" ]; then
   # classified every operation); "locked" is the control and must show only ok.
   mkdir -p "$ROOT/java/misuse-build"
   if javac --release 21 -nowarn -d "$ROOT/java/misuse-build" "$ROOT/java/misuse/SharedSignatureMisuse.java" >"$OUT/javac-misuse.log" 2>&1; then
-    targets=("BC|java|$ROOT/java/misuse-build:$CP|BC|${MISUSE_BC_KPG:-ML-DSA-65,ML-DSA}|${MISUSE_BC_SIG:-ML-DSA}")
+    # label|java binary|classpath|provider|keypair alg[,fallback]|signature alg|run the sweep (1/0)
+    targets=("BC|java|$ROOT/java/misuse-build:$CP|BC|${MISUSE_BC_KPG:-ML-DSA-65,ML-DSA}|${MISUSE_BC_SIG:-ML-DSA}|1")
+    BCLATEST=$(ls "$ROOT"/java/lib-bc-latest/bcprov-*.jar 2>/dev/null | head -1)
+    if [ -n "$BCLATEST" ]; then
+      BCLV=$(basename "$BCLATEST" .jar | sed 's/.*-//')
+      targets+=("BC-$BCLV|java|$ROOT/java/misuse-build:$BCLATEST|BC|ML-DSA-65,ML-DSA|ML-DSA|0")
+    else row "Bouncy Castle latest" SKIPPED "java/lib-bc-latest/bcprov-*.jar missing"; fi
     want_jdk=${JDK25:-auto}
     if [ "$want_jdk" != 0 ] && [ -x "$JDK25_HOME/bin/java" ]; then
-      targets+=("JDK|$JDK25_HOME/bin/java|$ROOT/java/misuse-build|SUN|ML-DSA-65|ML-DSA")
+      targets+=("JDK|$JDK25_HOME/bin/java|$ROOT/java/misuse-build|SUN|ML-DSA-65|ML-DSA|1")
     elif [ "$want_jdk" = 1 ]; then row "JDK 25 provider" "**FAIL**" "no java under $JDK25_HOME"; FAILED=1
     else row "JDK 25 provider" SKIPPED "no java under $JDK25_HOME"; fi
     for tg in "${targets[@]}"; do
-      IFS='|' read -r label jbin jcp prov kpg salg <<<"$tg"
+      IFS='|' read -r label jbin jcp prov kpg salg dosweep <<<"$tg"
       misuse() { # mode size threads runs
         for _ in $(seq "$4"); do
           MISUSE_MSG_BYTES=$2 MISUSE_THREADS=$3 "$jbin" -cp "$jcp" SharedSignatureMisuse "$kpg" "$salg" "$prov" "$1" || return 1
@@ -205,7 +211,7 @@ if command -v javac >/dev/null && [ -n "$CP" ]; then
       sweep() {
         for th in $SWEEP_THREADS; do for sz in $SWEEP_SIZES; do misuse shared "$sz" "$th" "$SWEEP_RUNS" || return 1; done; done
       }
-      stage "Java $label $salg misuse sweep, threads {$SWEEP_THREADS} x sizes {$SWEEP_SIZES}" "sweep-$label.log" sweep
+      [ "$dosweep" = 1 ] && stage "Java $label $salg misuse sweep, threads {$SWEEP_THREADS} x sizes {$SWEEP_SIZES}" "sweep-$label.log" sweep
     done
   else row "Java misuse compile" "**FAIL**" javac-misuse.log; FAILED=1; fi
 
@@ -214,6 +220,10 @@ if command -v javac >/dev/null && [ -n "$CP" ]; then
   if javac --release 21 -nowarn -d "$ROOT/demo/build" "$ROOT/demo/BankSigningDemo.java" >"$OUT/javac-demo.log" 2>&1; then
     demo_bc() { DEMO_JSON="$OUT/demo-BC.json" java -cp "$ROOT/demo/build:$CP" BankSigningDemo ML-DSA BC; }
     stage "Bank demo: payment signing service, BC ML-DSA (vulnerable vs fixed)" demo-BC.log demo_bc
+    if [ -n "${BCLATEST:-}" ]; then
+      demo_bcl() { DEMO_JSON="$OUT/demo-BC-latest.json" java -cp "$ROOT/demo/build:$BCLATEST" BankSigningDemo ML-DSA BC; }
+      stage "Bank demo: payment signing service, BC $BCLV ML-DSA (vulnerable vs fixed)" demo-BC-latest.log demo_bcl
+    fi
     if [ -x "$JDK25_HOME/bin/java" ]; then
       demo_jdk() { DEMO_JSON="$OUT/demo-JDK.json" "$JDK25_HOME/bin/java" -cp "$ROOT/demo/build" BankSigningDemo ML-DSA SUN; }
       stage "Bank demo: payment signing service, JDK ML-DSA (vulnerable vs fixed)" demo-JDK.log demo_jdk
