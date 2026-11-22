@@ -118,9 +118,18 @@ if [ "$want_ossl" != 0 ] && [ -f "$OPENSSL_PREFIX/include/openssl/evp.h" ] && co
   }
   stage "C OpenSSL shared signing ctx under a mutex (misuse control, must be all ok, no races)" openssl-locked-ctx.log ossl_locked
   ossl_misuse() {
+    # A shared EVP_PKEY_CTX can corrupt state so badly that signing never returns (CI runs 4 and 6 sat in
+    # this stage for over an hour). Each run therefore gets a hard limit; a run that hits it is recorded as
+    # a hang, which is itself an outcome of the misuse, and the stage goes on.
     cd "$ROOT/c" || return 1
-    for _ in $(seq "$RUNS"); do TSAN_OPTIONS="halt_on_error=0 exitcode=0" ./openssl_shared shared-ctx || return 1; done
-    echo "RESULT openssl shared-ctx tsan_reports=$(grep -c 'WARNING: ThreadSanitizer' "$OUT/openssl-shared-ctx.log")"
+    local rc hangs=0 crashes=0
+    for i in $(seq "$RUNS"); do
+      TSAN_OPTIONS="halt_on_error=0 exitcode=0" timeout --signal=KILL "${OSSL_MISUSE_TIMEOUT:-300}" ./openssl_shared shared-ctx
+      rc=$?
+      if [ "$rc" = 137 ]; then hangs=$((hangs + 1)); echo "RESULT provider=OpenSSL alg=ML-DSA-65 mode=shared-ctx run=$i outcome=hang (killed after ${OSSL_MISUSE_TIMEOUT:-300}s)"
+      elif [ "$rc" != 0 ]; then crashes=$((crashes + 1)); echo "RESULT provider=OpenSSL alg=ML-DSA-65 mode=shared-ctx run=$i outcome=crash exit=$rc"; fi
+    done
+    echo "RESULT openssl shared-ctx runs=$RUNS hangs=$hangs crashes=$crashes tsan_reports=$(grep -c 'WARNING: ThreadSanitizer' "$OUT/openssl-shared-ctx.log")"
   }
   stage "C OpenSSL ONE signing ctx shared without lock (misuse characterization)" openssl-shared-ctx.log ossl_misuse
 elif [ "$want_ossl" = 1 ]; then row "C OpenSSL" "**FAIL**" "OpenSSL not found under $OPENSSL_PREFIX"; FAILED=1
