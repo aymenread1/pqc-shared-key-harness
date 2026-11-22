@@ -1,0 +1,515 @@
+# Sampling frame frozen 2026-11-22 from the GitHub repository search API.
+# Columns: owner/name sizeKB stars frame [query]. frame=top: the 200 most-starred non-archived Java repositories (stars>3000).
+# frame=crypto: top results (stars>=20; xades/zatca/e-invoice stars>=5) for security-related queries, deduplicated against top.
+NationalSecurityAgency/ghidra 417734 100982 top
+iluwatar/java-design-patterns 48731 94899 top
+macrozheng/mall 58744 85075 top
+spring-projects/spring-boot 227437 82007 top
+doocs/advanced-java 34506 79197 top
+elastic/elasticsearch 1881776 78777 top
+MisterBooo/LeetCodeAnimation 510338 76712 top
+TheAlgorithms/Java 7900 67313 top
+kdn251/interviews 24462 65574 top
+termux/termux-app 5292 65471 top
+spring-projects/spring-framework 258059 60330 top
+dbeaver/dbeaver 260171 52509 top
+skylot/jadx 26637 51947 top
+google/guava 1441929 51924 top
+jeecgboot/JeecgBoot 105472 48582 top
+ReactiveX/RxJava 181876 48147 top
+lysine-dev/retrofit 11991 43941 top
+ashishps1/awesome-system-design-resources 2356 43542 top
+apache/dubbo 61859 41568 top
+TeamNewPipe/NewPipe 92415 40877 top
+YunaiV/ruoyi-vue-pro 211465 40582 top
+halo-dev/halo 90604 40376 top
+keycloak/keycloak 631929 38001 top
+alibaba/arthas 73693 37625 top
+eugenp/tutorials 133509 37305 top
+doocs/leetcode 933811 36769 top
+yuliskov/SmartTube 113088 36559 top
+geekxh/hello-algorithm 365053 36111 top
+airbnb/lottie-android 137398 35776 top
+netty/netty 121185 35069 top
+bumptech/glide 98900 35005 top
+SeleniumHQ/selenium 2417869 34606 top
+apache/kafka 329385 34251 top
+zxing/zxing 244319 34217 top
+xkcoding/spring-boot-demo 14194 34034 top
+Blankj/AndroidUtilCode 47329 33597 top
+alibaba/nacos 113570 33534 top
+binarywang/WxJava 20926 33205 top
+conductor-oss/conductor 64799 32495 top
+floci-io/floci 143465 32041 top
+xuxueli/xxl-job 39371 30674 top
+ityouknow/spring-boot-examples 1074 30420 top
+TelegramMessenger/Telegram-Android 818517 30379 top
+opendataloader-project/opendataloader-pdf 91385 30357 top
+kestra-io/kestra 160897 30317 top
+chinabugotech/hutool 75890 30219 top
+Anuken/Mindustry 2013704 29942 top
+apolloconfig/apollo 58508 29812 top
+alibaba/canal 24261 29747 top
+alibaba/spring-cloud-alibaba 56429 29156 top
+wuyouzhuguli/SpringAll 1069 28911 top
+OtterMind/Chat2DB 59265 28365 top
+ashishps1/awesome-low-level-design 15979 28218 top
+alibaba/druid 94025 28139 top
+lenve/vhr 8554 28012 top
+iBotPeaches/Apktool 361614 27331 top
+OpenAPITools/openapi-generator 1024493 26868 top
+jenkinsci/jenkins 175134 26801 top
+crossoverJie/JCSprout 1191 26780 top
+qiurunze123/miaosha 65716 26557 top
+apache/flink 562089 26487 top
+bazelbuild/bazel 1041192 26133 top
+apache/incubator-seata 33275 26005 top
+LSPosed/LSPosed 21655 25603 top
+libgdx/libgdx 1107445 25552 top
+JakeWharton/butterknife 3909 25306 top
+hollischuang/toBeTopJavaer 8004 25270 top
+scwang90/SmartRefreshLayout 274026 25080 top
+apache/skywalking 183867 25019 top
+dataease/dataease 357643 24723 top
+greenrobot/EventBus 1742 24672 top
+Netflix/Hystrix 9828 24475 top
+redisson/redisson 38262 24437 top
+google/gson 23549 24236 top
+kunal-kushwaha/DSA-Bootcamp-Java 101640 24181 top
+EnterpriseQualityCoding/FizzBuzzEnterpriseEdition 340 23950 top
+openjdk/jdk 1508159 23564 top
+comet-ml/opik 879537 23487 top
+alibaba/Sentinel 8604 23142 top
+doocs/source-code-hunter 103687 23125 top
+thingsboard/thingsboard 432954 22703 top
+apache/rocketmq 47446 22659 top
+google/ExoPlayer 483311 21936 top
+elunez/eladmin 7529 21900 top
+oracle/graal 544172 21756 top
+CarGuo/GSYVideoPlayer 538576 21538 top
+brettwooldridge/HikariCP 5061 21254 top
+apache/shardingsphere 709061 20833 top
+JetBrains/intellij-community 6190884 20749 top
+mybatis/mybatis-3 159853 20431 top
+didi/DoKit 59051 20420 top
+linlinjava/litemall 24622 20411 top
+yudaocode/SpringBoot-Labs 1813 20110 top
+elizaOS/eliza 2133062 19912 top
+ReactiveX/RxAndroid 1070 19890 top
+YunaiV/yudao-cloud 66797 19811 top
+dromara/Sa-Token 15067 19130 top
+antlr/antlr4 70649 19050 top
+dianping/cat 114117 18932 top
+williamfiset/algorithms 1297916 18916 top
+Baseflow/PhotoView 16896 18787 top
+LMAX-Exchange/disruptor 10129 18498 top
+APIJSON/APIJSON 74500 18394 top
+ashishps1/awesome-leetcode-resources 249 18117 top
+ben-manes/caffeine 116990 17957 top
+forezp/SpringCloudLearning 582 17888 top
+itwanger/toBeBetterJavaer 1303960 17853 top
+gyoogle/tech-interview-for-developer 6616 17695 top
+Tencent/tinker 7276 17669 top
+justauth/JustAuth 9629 17549 top
+questdb/questdb 2252274 17546 top
+infinilabs/analysis-ik 15543 17514 top
+baomidou/mybatis-plus 34477 17484 top
+neo4j/neo4j 715763 17478 top
+openzipkin/zipkin 77462 17475 top
+material-components/material-components-android 183553 17473 top
+alibaba/DataX 22945 17395 top
+heibaiying/BigData-Notes 24052 17013 top
+Grasscutters/Grasscutter 101502 16815 top
+nostra13/Android-Universal-Image-Loader 27133 16787 top
+prestodb/presto 288970 16777 top
+winterbe/java8-tutorial 149 16699 top
+shuzheng/zheng 41267 16626 top
+cryptomator/cryptomator 36725 16563 top
+JeffLi1993/springboot-learning-example 407 16548 top
+apache/doris 1472246 16249 top
+zaproxy/zaproxy 202588 16244 top
+android-hacker/VirtualXposed 49794 16093 top
+quarkusio/quarkus 550908 15998 top
+Konloch/bytecode-viewer 648677 15728 top
+apache/hadoop 613628 15719 top
+dyc87112/SpringBoot-Learning 34384 15679 top
+android10/Android-CleanArchitecture 5191 15526 top
+mockito/mockito 49822 15451 top
+microg/GmsCore 17571 15398 top
+theonedev/onedev 264769 15373 top
+apache/pulsar 301767 15368 top
+supertokens/supertokens-core 964870 15347 top
+languagetool-org/languagetool 6328534 15289 top
+java-decompiler/jd-gui 56989 15229 top
+zhisheng17/flink-learning 43774 15109 top
+elastic/logstash 136171 14983 top
+kekingcn/kkFileView 762417 14869 top
+arduino/Arduino 1387855 14720 top
+eclipse-vertx/vert.x 127376 14685 top
+DuGuQiuBai/Java 24346 14675 top
+xpipe-io/xpipe 75206 14666 top
+apache/dolphinscheduler 225771 14563 top
+Tencent/QMUI_Android 21963 14476 top
+hdodenhof/CircleImageView 1003 14459 top
+GoogleContainerTools/jib 16945 14455 top
+alibaba/ARouter 26915 14447 top
+janishar/mit-deep-learning-book-pdf 58474 14314 top
+deeplearning4j/deeplearning4j 831618 14284 top
+Netflix/zuul 6928 14098 top
+apache/druid 441897 14098 top
+opensearch-project/OpenSearch 629526 14049 top
+LawnchairLauncher/lawnchair 925435 13987 top
+sqshq/piggymetrics 1512 13970 top
+pinpoint-apm/pinpoint 280875 13876 top
+seaswalker/spring-analysis 4951 13760 top
+JessYanCoding/AndroidAutoSize 3131 13723 top
+metersphere/metersphere 427358 13652 top
+beemdevelopment/Aegis 23060 13604 top
+LuckSiege/PictureSelector 542078 13574 top
+trinodb/trino 333309 13539 top
+lgvalle/Material-Animations 8692 13522 top
+projectlombok/lombok 81686 13484 top
+macrozheng/mall-learning 39420 13441 top
+plantuml/plantuml 1487499 13433 top
+langchain4j/langchain4j 45710 13433 top
+Bigkoo/Android-PickerView 6389 13411 top
+debezium/debezium 99779 13367 top
+macrozheng/mall-swarm 54615 13210 top
+pxb1988/dex2jar 8725 13152 top
+alibaba/COLA 3824 13088 top
+youth5201314/banner 11310 13001 top
+codecentric/spring-boot-admin 110858 12851 top
+apache/zookeeper 163752 12833 top
+PaperMC/Paper 136111 12831 top
+Netflix/eureka 12640 12752 top
+google/guice 125392 12733 top
+greenrobot/greenDAO 7353 12578 top
+zhihu/Matisse 1991 12489 top
+daimajia/AndroidViewAnimations 297 12429 top
+redis/jedis 20478 12380 top
+amitshekhariitbhu/android-interview-questions 1484 12366 top
+daimajia/AndroidSwipeLayout 399 12342 top
+provectus/kafka-ui 30382 12331 top
+pagehelper-org/Mybatis-PageHelper 5444 12312 top
+StarRocks/starrocks 829506 12279 top
+OpenRefine/OpenRefine 408007 12118 top
+Yalantis/uCrop 64991 12078 top
+grpc/grpc-java 111800 12078 top
+Tencent/matrix 199709 12073 top
+LaurieWired/GhidraMCP 414 12007 top
+jd-opensource/joyagent-jdgenie 102676 11957 top
+ZCShou/GoGoGo 440396 11901 top
+Tencent/VasSonic 16215 11845 top
+frank-lam/fullstack-tutorial 65725 11690 top
+norkator/cryptography 19363 223 crypto bouncycastle
+neuhalje/bouncy-gpg 5987 219 crypto bouncycastle
+pgpainless/pgpainless 9465 213 crypto bouncycastle
+guoliao502/crypto 54 72 crypto bouncycastle
+wcnwyx/gm-encryption 11 56 crypto bouncycastle
+vt-middleware/cryptacular 169665 44 crypto bouncycastle
+theautonomy/bouncycastle-gpg-example 83 43 crypto bouncycastle
+andy-goryachev/MemSafeCrypto 35881 33 crypto bouncycastle
+dnl50/tsa 1148 29 crypto bouncycastle
+dreezey/argon2-password-hash-provider 47 26 crypto bouncycastle
+txedo/bouncycastle-rsa-pem-write 5 22 crypto bouncycastle
+rodbate/bouncycastle-examples 34961 21 crypto bouncycastle
+esig/dss 280756 1049 crypto digital_signature
+intoolswetrust/jsignpdf 218811 492 crypto digital_signature
+chrisneagu/FTC-Skystone-Dark-Angels-Romania-2020 79960 325 crypto digital_signature
+ComPDFKit/compdfkit-pdf-sdk-android 997788 143 crypto digital_signature
+damianofalcioni/Websocket-Smart-Card-Signer 12448 49 crypto digital_signature
+jmarxuach/BatchPDFSign 104 49 crypto digital_signature
+AlessioScarfone/Java-Digital-Signature 20461 41 crypto digital_signature
+KarolKlimonczyk/DigitalSignature 13 33 crypto digital_signature
+aws-samples/pix-proxy-samples 1526 33 crypto digital_signature
+AlessioScarfone/Digital-Signature-Chrome-Extension 26383 25 crypto digital_signature
+atul19971/crypto4ora 46 25 crypto digital_signature
+eideasy/eideasy-external-pades-digital-signatures 94 21 crypto digital_signature
+ntmcminn/CounterSign 1496 21 crypto digital_signature
+Keyfactor/ejbca-ce 1077143 969 crypto pki
+xipki/xipki 134048 611 crypto pki
+dogtagpki/pki 73133 516 crypto pki
+Tencent/TencentKonaSMSuite 26759 461 crypto pki
+Keyfactor/signserver-ce 552057 441 crypto pki
+ncanode-kz/NCANode 2870 328 crypto pki
+philipWendland/IsoApplet 361 217 crypto pki
+demoiselle/signer 56983 182 crypto pki
+salyh/elasticsearch-security-plugin 344 169 crypto pki
+spapas/pdf-sign-check 579 97 crypto pki
+dushitaoyuan/littleca 27743 65 crypto pki
+coniks-sys/coniks-java 2990 62 crypto pki
+twjitm/pki 12273 40 crypto pki
+mich01/SpiderSMS 89471 40 crypto pki
+nelenkov/virtual-pki-card 693 39 crypto pki
+JavaCardOS/Java-Card-PKI-Applet 1748 30 crypto pki
+VirgilSecurity/virgil-sdk-java-android 136945 28 crypto pki
+jwtk/jjwt 3772 11148 crypto jwt
+wxiaoqi/Spring-Cloud-Platform 212466 6391 crypto jwt
+auth0/java-jwt 1640 6228 crypto jwt
+dromara/lamp-cloud 63331 5762 crypto jwt
+zlt2000/microservices-platform 300854 4746 crypto jwt
+hansonwang99/Spring-Boot-In-Action 15827 4653 crypto jwt
+IoT-Technology/IoT-Technical-Guide 1361 4564 crypto jwt
+Exrick/xboot 5309 3884 crypto jwt
+yangzongzhuan/RuoYi-Vue 5819 3296 crypto jwt
+szerhusenBC/jwt-spring-security-demo 328 3099 crypto jwt
+vector4wang/spring-boot-quick 5438 2791 crypto jwt
+Naccl/NBlog 13542 2696 crypto jwt
+pac4j/pac4j 77811 2538 crypto jwt
+youlaitech/youlai-mall 146763 2371 crypto jwt
+ali-bouali/spring-boot-3-jwt-security 80 2035 crypto jwt
+dromara/MaxKey 368216 1991 crypto jwt
+callicoder/spring-security-react-ant-design-polls-app 3070 1866 crypto jwt
+moxi624/mogu_blog_v2 68820 1811 crypto jwt
+murraco/spring-boot-jwt 80 1691 crypto jwt
+ZainZhao/HIS 9344 1642 crypto jwt
+Smith-Cruise/Spring-Boot-Shiro 47 1632 crypto jwt
+bezkoder/spring-boot-spring-security-jwt-authentication 141 1595 crypto jwt
+Zealon159/light-reading-cloud 310 1495 crypto jwt
+Snailclimb/spring-security-jwt-guide 2264 1445 crypto jwt
+RudeCrab/rude-java 2043 1412 crypto jwt
+wayn111/waynboot-mall 50281 1283 crypto jwt
+yangzongzhuan/RuoYi-Vue-fast 1547 1142 crypto jwt
+hiparker/opsli-boot 15862 1076 crypto jwt
+xdmdcp/hospital 965 974 crypto jwt
+dromara/sureness 8695 873 crypto jwt
+osopromadze/Spring-Boot-Blog-REST-API 312 871 crypto jwt
+bigmeow/JWT 3151 869 crypto jwt
+bfwg/springboot-jwt-starter 269 850 crypto jwt
+rymcu/forest 2722 811 crypto jwt
+svlada/springboot-security-jwt 93 739 crypto jwt
+SaiUpadhyayula/spring-reddit-clone 472 726 crypto jwt
+maventalker/simplemall 887 716 crypto jwt
+dolyw/ShiroJwt 203 686 crypto jwt
+echisan/springboot-jwt-demo 241 682 crypto jwt
+dromara/surpass 117477 656 crypto jwt
+keets2012/Auth-service 108 655 crypto jwt
+bage2014/study 407800 651 crypto jwt
+guchengwuyue/yshopmall 49041 645 crypto jwt
+Sunagatov/Iced-Latte 90991 640 crypto jwt
+isopropylcyanide/Jwt-Spring-Security-JPA 432 554 crypto jwt
+OmarElgabry/microservices-spring-boot 74 550 crypto jwt
+yu120/neural 758 547 crypto jwt
+nydiarra/springboot-jwt 87 546 crypto jwt
+panbinibn/OpenPacketFix_ 558 216 crypto pdf_signature
+zhoorta/android-pdf-signer 799 32 crypto pdf_signature
+gazman-sdk/BLS_signature_aggregation 119 27 crypto pdf_signature
+Javen205/IJPay 25501 6619 crypto payment
+killbill/killbill 682837 5862 crypto payment
+wechatpay-apiv3/wechatpay-java 1025 1548 crypto payment
+omnilaboratory/OBAndroid 1811878 921 crypto payment
+little-snow-fox/react-native-wechat-lib 27176 751 crypto payment
+jigsaw-projects/jigsaw-payment 17108 653 crypto payment
+AlicanAkkus/Modular-Architecture-Hexagonal-Demo-Project 939 633 crypto payment
+YClimb/wxpay-sdk 89 598 crypto payment
+shashirajraja/onlinebookstore 4746 557 crypto payment
+inforkgodara/store-pos 36030 286 crypto payment
+boyuanitsm/pay 448 204 crypto payment
+tranxactive/J2PAY 1259 196 crypto payment
+manuelbl/SwissQRBill 7806 187 crypto payment
+sasc999/javaemvreader 1093 170 crypto payment
+RahulAutade2288/payments-modernization-hub 30702 141 crypto payment
+imohsenb/ISO8583-Message-Client-java 190 135 crypto payment
+ionutbalosin/ecommerce-app 2185 134 crypto payment
+PaystackHQ/paystack-android 639 129 crypto payment
+square/point-of-sale-android-sdk 26308 126 crypto payment
+NotFound403/payment-spring-boot-samples 68 118 crypto payment
+LivotovLabs/3DSView 283 115 crypto payment
+ravi8x/Android-E-Commerce-PayTM 338 93 crypto payment
+mrautio/emv-card-simulator 548 82 crypto payment
+nitish24p/react-native-upi 143 81 crypto payment
+adyen-examples/adyen-java-spring-online-payments 103408 77 crypto payment
+veritrans/veritrans-android 61570 77 crypto payment
+manojbhadane/PaymentCardView 1659 74 crypto payment
+yildizmy/e-wallet 3957 73 crypto payment
+brendanw/PaymentKit-Droid 13696 72 crypto payment
+pikaju/flutter-braintree 333 72 crypto payment
+radiegtya/react-native-midtrans 261 69 crypto payment
+Java-Techie-jt/spring-boot-paypal-example 6 67 crypto payment
+RahulAutade2288/real-time-payment-architecture-orchestration 17439 67 crypto payment
+janlle/java-pay 96 66 crypto payment
+handstandsam/HandstandPay 2832 66 crypto payment
+Fernanda-Kipper/simplified-payment-api 76 64 crypto payment
+developermypos/myPOS-SDK-Android 6332 62 crypto payment
+AuthorizeNet/sdk-java 20078 60 crypto payment
+CyberSource/cybersource-sdk-java 36663 60 crypto payment
+ZonCon/Ecommerce-Retronight-Android 9845 60 crypto payment
+masasdani/paypal-springboot 9 59 crypto payment
+kloverde/java-PaymentCardGenerator 105 58 crypto payment
+apache/shiro 34445 4465 crypto cryptography
+Peergos/Peergos 1092084 2556 crypto cryptography
+google/conscrypt 26936 1413 crypto cryptography
+826148267/cjml_server 73087 849 crypto cryptography
+GrapheneOS/Auditor 2950 731 crypto cryptography
+ffffffff0x/BerylEnigma 39999 696 crypto cryptography
+iamMehedi/Secured-Preference-Store 204 558 crypto cryptography
+Password4j/password4j 827 440 crypto cryptography
+Cathedrow/Cryptosuite 190 334 crypto cryptography
+tink-crypto/tink-java 31226 315 crypto cryptography
+patrickfav/armadillo 2429 308 crypto cryptography
+TorgoTorgo/ghidra-findcrypt 225 303 crypto cryptography
+liuweiran900217/CloudCrypto 12724 284 crypto cryptography
+corretto/amazon-corretto-crypto-provider 14723 275 crypto cryptography
+craftzdog/react-native-aes-gcm-crypto 1452 256 crypto cryptography
+scipr-lab/dizk 179 242 crypto cryptography
+dschadow/JavaSecurity 2995 240 crypto cryptography
+zapek/Xeres 53636 224 crypto cryptography
+joshjdevl/libsodium-jni 1507 189 crypto cryptography
+jcryptool/core 233908 180 crypto cryptography
+xuzongbao/encryption 83 177 crypto cryptography
+GrapheneOS/AttestationServer 4305 177 crypto cryptography
+scop/portecle 42274 176 crypto cryptography
+cbomkit/cbomkit 39224 171 crypto cryptography
+lucapiccolboni/crylogger 21681 159 crypto cryptography
+terl/lazysodium-java 18124 157 crypto cryptography
+crocs-muni/JCAlgTest 76956 148 crypto cryptography
+aicis/fresco 19048 142 crypto cryptography
+RubyCrypto/ed25519 1062 136 crypto cryptography
+terl/lazysodium-android 5146 125 crypto cryptography
+pflaeging/PortableSigner2 10860 124 crypto cryptography
+nitram509/jmacaroons 1521 119 crypto cryptography
+louiscb/VPN-Project 59 114 crypto cryptography
+neilalexander/jnacl 59 112 crypto cryptography
+nagyesta/lowkey-vault 10487 112 crypto cryptography
+ph4r05/Whitebox-crypto-AES-java 146 105 crypto cryptography
+idealista/format-preserving-encryption-java 177 105 crypto cryptography
+Drapegnik/bsu 23818 103 crypto cryptography
+simlar/simlar-android 417379 102 crypto cryptography
+luisgoncalves/xades4j 19271 122 crypto xades
+joselo/sri 9260 28 crypto xades
+obetron/signerx 14465 11 crypto xades
+universitatjaumei/jxades 588 11 crypto xades
+duuba/xades 213 10 crypto xades
+ETDA/etax-xades 7639 9 crypto xades
+Good-Samaritan/signature-demo 81 9 crypto xades
+busaeed/E-InvoiceQRBarcode 156 16 crypto zatca
+svanteschubert/en16931-data-extractor 139255 18 crypto e-invoice
+klst-de/e-invoice 5459 16 crypto e-invoice
+AlessioFerrari8/crm 3658 14 crypto e-invoice
+bykowski/invoice-spring-mvc-example 4 10 crypto e-invoice
+mjl371/eInvoiceTool 1527 10 crypto e-invoice
+lujixuan/invoice2excel 46182 9 crypto e-invoice
+mostafaism1/eta-einvoice-signer 274 8 crypto e-invoice
+SatyamSoni23/E-receipt 74318 7 crypto e-invoice
+patrickfav/uber-apk-signer 7943 2815 crypto keystore
+kaikramer/keystore-explorer 49472 2079 crypto keystore
+escline/InstallCert 14 900 crypto keystore
+Hakky54/mutual-tls-ssl 1560 638 crypto keystore
+Hakky54/ayza 4952 582 crypto keystore
+MaxCamillo/android-keystore-password-recover 162 354 crypto keystore
+ophio/secure-preferences 143 336 crypto keystore
+nelenkov/android-keystore 1538 241 crypto keystore
+obaro/SimpleKeystoreApp 79 125 crypto keystore
+flschweiger/SafeApp 1692 95 crypto keystore
+wutongke/KeyStoreDemo 40 82 crypto keystore
+TalusL/GMCA 18 68 crypto keystore
+nelenkov/keystore-decryptor 25 63 crypto keystore
+wei-spring/MultiSignTools 8906 62 crypto keystore
+zhibuyu/KeyStoreEncryDemo 121 57 crypto keystore
+Q42/Qlassified-Android 166 47 crypto keystore
+ctron/pem-keystore 124 45 crypto keystore
+altfatterz/spring-ws-with-keystore 48 44 crypto keystore
+heroku/env-keystore 467 40 crypto keystore
+meefik/keystorebreaker 54 39 crypto keystore
+tidev/titanium-identity 1309 39 crypto keystore
+joetsaitw/AndroidKeyStore 342 36 crypto keystore
+robymus/wowza-letsencrypt-converter 72 34 crypto keystore
+reime005/react-native-secure-element 1851 32 crypto keystore
+mvallim/spring-schema-registry 327 30 crypto keystore
+gangan1345/wallet-eth-android 142 28 crypto keystore
+adorsys/keystore-management 950 21 crypto keystore
+atomashpolskiy/bt 89395 2480 crypto encryption_library
+itext/itext-java 822145 2260 crypto encryption_library
+huangyz0918/AndroidWM 4105 1628 crypto encryption_library
+adorsys/secure-storage-android 4248 374 crypto encryption_library
+vypdev/stringcare-android 53907 255 crypto encryption_library
+encryptedsystems/Clusion 263 210 crypto encryption_library
+xxtea/xxtea-java 11 152 crypto encryption_library
+Mastercard/client-encryption-java 680 138 crypto encryption_library
+agoston/spring-data-mongodb-encrypt 226 87 crypto encryption_library
+n1analytics/javallier 575 85 crypto encryption_library
+kryptnostic/fhe-core 1254 83 crypto encryption_library
+rockaport/alice 192 78 crypto encryption_library
+BottleRocketStudios/Android-Vault 310 70 crypto encryption_library
+krsticdragan/AutoTypingTextView 98 62 crypto encryption_library
+QuickSign/kafka-encryption 204 53 crypto encryption_library
+croz-ltd/nrich 4027 53 crypto encryption_library
+jmrapp1/NitroNet 3361 42 crypto encryption_library
+hummatli/SimpleEncryptionLib 18639 40 crypto encryption_library
+NeilMadden/salty-coffee 186 39 crypto encryption_library
+jitsi/otr4j 4337 36 crypto encryption_library
+cirorizzo/JealousSky 95 35 crypto encryption_library
+damianszczepanik/silencio 606 35 crypto encryption_library
+HussainDerry/secure-preferences 251 35 crypto encryption_library
+aws/amazon-s3-encryption-client-java 17875 33 crypto encryption_library
+acmi/L2crypt 234 33 crypto encryption_library
+moldedbits/r2d2 173 33 crypto encryption_library
+rishelarora/AES256PasswordBasedEncryption-Decryption 1016 32 crypto encryption_library
+sashank/jsse 36 30 crypto encryption_library
+OpenDPC/diSE 13810 30 crypto encryption_library
+ragnor-rs/sklad 293 27 crypto encryption_library
+tntkhang/realm-encryption-helper 101 23 crypto encryption_library
+bitcoin-wallet/bitcoin-wallet 42022 4175 crypto blockchain_wallet
+AlphaWallet/alpha-wallet-android 65947 651 crypto blockchain_wallet
+RunlaiDeng/tokencore 42288 319 crypto blockchain_wallet
+Web3CoinExchange/WalletExchange 10757 259 crypto blockchain_wallet
+DwayneQ1016/ETHWallet 930 255 crypto blockchain_wallet
+neow3j/neow3j 10537 143 crypto blockchain_wallet
+piomin/sample-spring-blockchain-contract 50 49 crypto blockchain_wallet
+citahub/cyton-android 21750 48 crypto blockchain_wallet
+qlcchain/QWallet-Android 820713 48 crypto blockchain_wallet
+htczion/ZKMA 15486 40 crypto blockchain_wallet
+arcbit/arcbit-android 95591 39 crypto blockchain_wallet
+Tokenview/api-demo 49 37 crypto blockchain_wallet
+dora4/dora-walletconnect-support 72868 37 crypto blockchain_wallet
+lky1001/tron-android-wallet 67033 34 crypto blockchain_wallet
+OracleChain/EosProxyServer 993 34 crypto blockchain_wallet
+Multy-io/Multy-Android 10036 33 crypto blockchain_wallet
+OCEChain/OCEWallet 32637 26 crypto blockchain_wallet
+Samourai-Wallet/bitcoinj 2869 26 crypto blockchain_wallet
+htczion/ZKMS 10544 24 crypto blockchain_wallet
+the-web3/wallet-java-sdk 3611 20 crypto blockchain_wallet
+OpenIdentityPlatform/OpenAM 551620 900 crypto saml
+SAML-Toolkits/java-saml 2093 652 crypto saml
+vdenotaris/spring-boot-security-saml-sample 1849 567 crypto saml
+bujiio/buji-pac4j 750 498 crypto saml
+CompassSecurity/SAMLRaider 12028 453 crypto saml
+pac4j/play-pac4j 1748 413 crypto saml
+OpenConext/Mujina 1482 387 crypto saml
+pac4j/spring-security-pac4j 778 279 crypto saml
+justinbleach/saml-client 200 172 crypto saml
+fujieid/jap 996 166 crypto saml
+pac4j/spark-pac4j 381 163 crypto saml
+ulisesbocchio/spring-boot-security-saml 497 161 crypto saml
+codice/ddf 559829 143 crypto saml
+pac4j/spring-webmvc-pac4j 620 139 crypto saml
+pac4j/vertx-pac4j 836 135 crypto saml
+sunrongxin7666/OpenSAML-ref-project-demo-v3 264 106 crypto saml
+OpenIdentityPlatform/OpenIG 10545 93 crypto saml
+oktadev/okta-spring-boot-saml-example 1254 88 crypto saml
+pac4j/buji-pac4j-demo 445 84 crypto saml
+pac4j/jee-pac4j 693 59 crypto saml
+pac4j/jax-rs-pac4j 944 56 crypto saml
+slem1/saml-angular 42 51 crypto saml
+choonchernlim/spring-security-adfs-saml2 815 50 crypto saml
+pac4j/javalin-pac4j 622 50 crypto saml
+ulisesbocchio/spring-boot-security-saml-samples 94 47 crypto saml
+lastpass/saml-sdk-java 59 47 crypto saml
+pac4j/play-pac4j-java-demo 1718 45 crypto saml
+grnet/eidas-keycloak-extension 1745 44 crypto saml
+pac4j/undertow-pac4j 442 43 crypto saml
+pac4j/spring-webmvc-pac4j-boot-demo 368 42 crypto saml
+ba-itsys/keycloak-extension-bundid 110 41 crypto saml
+gtiwari333/spring-security-saml-test-identity-provider-and-service-provider 67 39 crypto saml
+pateluday07/saml-sso-and-slo-demo-idp-azure-sp-springboot 518 38 crypto saml
+pac4j/spark-pac4j-demo 279 38 crypto saml
+kingsammalik/SamLocationAndGeocoding 114 37 crypto saml
+xiaosiyuan/saml 8739 35 crypto saml
+pac4j/spring-security-jee-pac4j-boot-demo 316 35 crypto saml
+peoplesoft-info/peoplesoft-azure-sso 32706 34 crypto saml
+rasmusson/OpenSAML-sample-code 81 29 crypto saml
+authsaur/authsaur 6011 28 crypto saml
+pac4j/vertx-pac4j-demo 513 28 crypto saml
+pac4j/dropwizard-pac4j 711 28 crypto saml
+isaacgarza/saml-example 124 27 crypto saml
+auth10/auth10-java 239 27 crypto saml
