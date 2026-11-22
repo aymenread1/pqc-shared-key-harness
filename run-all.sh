@@ -27,7 +27,12 @@ row() { printf '| %s | %s | %s |\n' "$1" "$2" "$3" | tee -a "$SUMMARY"; }
 
 stage() { # name logfile cmd...
   local name=$1 log=$2; shift 2
-  if ( "$@" ) >"$OUT/$log" 2>&1; then row "$name" PASS "$log"; else row "$name" "**FAIL**" "$log"; FAILED=1; fi
+  if ( "$@" ) >"$OUT/$log" 2>&1; then row "$name" PASS "$log"
+  else
+    row "$name" "**FAIL**" "$log"; FAILED=1
+    # show why in the console too (CI job logs), not only in the log file
+    echo "----- last 60 lines of $log -----"; tail -n 60 "$OUT/$log"; echo "----- end $log -----"
+  fi
 }
 
 # ---- Go ----------------------------------------------------------------------
