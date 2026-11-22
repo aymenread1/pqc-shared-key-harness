@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use these harnesses, please cite them as below."
+title: "Shared-key concurrency harnesses for post-quantum cryptographic libraries"
+authors:
+  - family-names: "Suliman"
+    given-names: "Ayman Alsadig Mohamed"
+version: 1.0.0
+date-released: 2026-11-22
+license: MIT
+keywords:
+  - post-quantum cryptography
+  - ML-KEM
+  - ML-DSA
+  - concurrency
+  - data race
+  - ThreadSanitizer
+  - JCStress

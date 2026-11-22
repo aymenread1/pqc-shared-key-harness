@@ -1,0 +1,6 @@
+results/
+rust/target/
+java/build/
+java/jcstress-build/
+java/lib/
+java/*.jar
