@@ -30,6 +30,8 @@ def parse(text):
             r = {k: int(kv.get(k, 0)) for k in KEYS}
         except ValueError:
             continue
+        if r["total"] == 0:                                          # hang/crash marker lines carry no counts
+            continue
         r.update(provider=prov, alg=kv.get("alg", "?"), mode=kv.get("mode", "?"),
                  threads=int(kv.get("threads", 0)), msgBytes=int(kv.get("msgBytes", 0)), java=kv.get("java", ""))
         rows.append(r)
