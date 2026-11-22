@@ -119,12 +119,12 @@ def classify(alg: str) -> str:
 TYPE_ALT = "|".join(ENGINE_TYPES)
 FIELD_RE = re.compile(
     r"(?P<mods>(?:\b(?:public|protected|private|static|final|volatile|transient)\s+)*)"
-    r"(?:(?:java\.security\.|javax\.crypto\.)?(?:KEM\.)?)(?P<type>" + TYPE_ALT + r")\s+"
+    r"(?<![\w.$])(?:(?:java\.security\.|javax\.crypto\.)?(?:KEM\.)?)(?P<type>" + TYPE_ALT + r")\s+"
     r"(?P<name>[A-Za-z_]\w*)\s*(?P<tail>[=;])")
 THREADLOCAL_RE = re.compile(r"ThreadLocal\s*<\s*(?:[\w.]*\.)?(?:" + TYPE_ALT + r")\s*>")
 BEAN_RE = re.compile(
     r"@Bean\b(?P<between>[^{;]*?)\b(?:public\s+|protected\s+|private\s+)?(?:static\s+)?"
-    r"(?:(?:java\.security\.|javax\.crypto\.)?(?:KEM\.)?)(?P<type>" + TYPE_ALT + r")\s+(?P<name>\w+)\s*\(", re.S)
+    r"(?<![\w.$])(?:(?:java\.security\.|javax\.crypto\.)?(?:KEM\.)?)(?P<type>" + TYPE_ALT + r")\s+(?P<name>\w+)\s*\(", re.S)
 GETINSTANCE_RE = re.compile(
     r"\b(?P<api>Signature|Cipher|Mac|MessageDigest|KeyAgreement|KEM|KeyPairGenerator|KeyGenerator|KeyFactory)"
     r"\s*\.\s*getInstance\s*\(\s*\"(?P<alg>[^\"]+)\"")
@@ -165,11 +165,47 @@ def enclosing_class(spans, pos):
     return best
 
 
+QUICK_RE = re.compile(r"\b(?:java\.security|javax\.crypto)\b")
+IMPORT_RE = re.compile(r"^\s*import\s+(?:static\s+)?([\w.]+?)(\.\*)?\s*;", re.M)
+JCA_HOME = {"Signature": "java.security", "MessageDigest": "java.security", "Cipher": "javax.crypto", "Mac": "javax.crypto",
+            "KeyAgreement": "javax.crypto", "Encapsulator": "javax.crypto.KEM", "Decapsulator": "javax.crypto.KEM"}
+
+
+def jca_types_in_scope(src: str) -> set:
+    """Simple type names that resolve to the JCA class in this file. Other libraries reuse these names
+    (cglib/ASM Signature, Apple-style Mac, ...), so a bare name counts only when an import points to the JCA."""
+    explicit, wild = {}, set()
+    for m in IMPORT_RE.finditer(src):
+        name, star = m.group(1), m.group(2)
+        if star:
+            wild.add(name)
+        else:
+            explicit[name.rsplit(".", 1)[-1]] = name.rsplit(".", 1)[0]
+    pkg = re.search(r"^\s*package\s+([\w.]+)\s*;", src, re.M)
+    pkg = pkg.group(1) if pkg else ""
+    ok = set()
+    for t, home in JCA_HOME.items():
+        if t in explicit:
+            if explicit[t] in (home, "javax.crypto.KEM") or explicit[t].endswith("KEM") and t in ("Encapsulator", "Decapsulator"):
+                ok.add(t)
+        elif home in wild or (t in ("Encapsulator", "Decapsulator") and "javax.crypto" in explicit.get("KEM", "") ):
+            ok.add(t)
+        elif pkg == home:
+            ok.add(t)
+    return ok
+
+
 def scan_java(path: str, rel: str, report: Report) -> None:
-    raw = open(path, encoding="utf-8", errors="replace").read()
+    with open(path, encoding="utf-8", errors="replace") as fh:
+        raw = fh.read()
+    if not QUICK_RE.search(raw):        # fast path: most files touch no JCA engine type at all
+        return
     src = strip_comments(raw)
     lines = raw.splitlines()
     spans = class_spans(src)
+    in_scope = jca_types_in_scope(src)
+    is_jca = lambda m: m.group(0).lstrip().startswith(("java.", "javax.")) or "java.security." in m.group(0) \
+        or "javax.crypto." in m.group(0) or m.group("type") in in_scope
     snippet = lambda ln: lines[ln - 1].strip()[:160] if 0 < ln <= len(lines) else ""
 
     tl_lines = {line_of(src, m.start()) for m in THREADLOCAL_RE.finditer(src)}
@@ -180,7 +216,7 @@ def scan_java(path: str, rel: str, report: Report) -> None:
 
     for m in FIELD_RE.finditer(src):
         ln = line_of(src, m.start())
-        if ln in tl_lines:
+        if ln in tl_lines or not is_jca(m):
             continue
         cls = enclosing_class(spans, m.start())
         if cls is None or depth_at(src, m.start(), cls[0]) != 1:
@@ -204,6 +240,8 @@ def scan_java(path: str, rel: str, report: Report) -> None:
 
     for m in BEAN_RE.finditer(src):
         if re.search(r"@Scope\s*\(\s*(?:value\s*=\s*)?(?:\"prototype\"|ConfigurableBeanFactory\.SCOPE_PROTOTYPE)", m.group("between")):
+            continue
+        if not is_jca(m):
             continue
         ln = line_of(src, m.start("type"))
         t = m.group("type")
