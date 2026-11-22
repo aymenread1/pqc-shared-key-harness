@@ -2,6 +2,8 @@
 # Runs every harness, writes logs to results/<timestamp>/ and prints a summary table.
 # Env: THREADS (16) OPS (500) RUNS (3) JAVA_ALGS ("ML-DSA") RUST_TSAN (auto|0|1) JCSTRESS (auto|0|1)
 #      RUST_NIGHTLY (toolchain name, default "nightly") JCSTRESS_MODE (sanity|quick|default|tough; default "default")
+#      LIBOQS (auto|0|1) LIBOQS_PREFIX (/opt/liboqs-tsan) CIRCL (auto|0|1)
+#      MISUSE_SIZES ("32 65536") message sizes for the Java shared-Signature misuse study
 #      auto = run if the tool is present, else SKIPPED; 1 = missing tool is a FAIL; 0 = never run
 # Exit code: 0 = every stage that ran passed; 1 = any stage failed. Skipped stages are listed.
 set -uo pipefail
@@ -12,8 +14,10 @@ RUNS=${RUNS:-3}
 JAVA_ALGS=${JAVA_ALGS:-ML-DSA}
 NIGHTLY=${RUST_NIGHTLY:-nightly}
 JCSTRESS_MODE=${JCSTRESS_MODE:-default}
+LIBOQS_PREFIX=${LIBOQS_PREFIX:-/opt/liboqs-tsan}
+MISUSE_SIZES=${MISUSE_SIZES:-32 65536}
 OUT="$ROOT/results/$(date -u +%Y%m%dT%H%M%SZ)"; mkdir -p "$OUT"
-SUMMARY="$OUT/summary.md"; FAILED=0
+SUMMARY="$OUT/summary.md"; DETAILS="$OUT/details.txt"; FAILED=0; : > "$DETAILS"
 row() { printf '| %s | %s | %s |\n' "$1" "$2" "$3" | tee -a "$SUMMARY"; }
 
 {
@@ -27,7 +31,11 @@ row() { printf '| %s | %s | %s |\n' "$1" "$2" "$3" | tee -a "$SUMMARY"; }
 
 stage() { # name logfile cmd...
   local name=$1 log=$2; shift 2
-  if ( "$@" ) >"$OUT/$log" 2>&1; then row "$name" PASS "$log"
+  local rc=0; ( "$@" ) >"$OUT/$log" 2>&1 || rc=1
+  # keep the measured numbers visible in the CI summary, not only inside the log files
+  grep -hE '^RESULT|shared-key [A-Za-z]|INVARIANT|CONTROL|HARNESS ERROR|first exception' "$OUT/$log" \
+    | sed "s/^ *//; s/^/[$log] /" | tee -a "$DETAILS" || true
+  if [ "$rc" = 0 ]; then row "$name" PASS "$log"
   else
     row "$name" "**FAIL**" "$log"; FAILED=1
     # show why in the console too (CI job logs), not only in the log file
@@ -50,6 +58,38 @@ if command -v go >/dev/null; then
   }
   stage "Go race-detector positive control (canary must be caught)" go-canary.log go_canary
 else row "Go" SKIPPED "go not installed"; fi
+
+# ---- Go: Cloudflare CIRCL (second Go library) ----------------------------------
+want_circl=${CIRCL:-auto}
+if [ "$want_circl" != 0 ] && command -v go >/dev/null && [ -d "$ROOT/go-circl" ]; then
+  circl_run() {
+    cd "$ROOT/go-circl" && go test -race -count="$RUNS" -run TestSharedKey -v ./... || return 1
+    ! grep -q 'no tests to run' "$OUT/go-circl.log"
+  }
+  stage "Go CIRCL ML-DSA-65 + ML-KEM-768 (-race)" go-circl.log circl_run
+elif [ "$want_circl" = 1 ]; then row "Go CIRCL" "**FAIL**" "go or go-circl/ missing"; FAILED=1
+else row "Go CIRCL" SKIPPED "disabled or go missing"; fi
+
+# ---- C: liboqs under ThreadSanitizer --------------------------------------------
+want_oqs=${LIBOQS:-auto}
+if [ "$want_oqs" != 0 ] && [ -f "$LIBOQS_PREFIX/include/oqs/oqs.h" ] && command -v cc >/dev/null; then
+  C_FLAGS=(-fsanitize=thread -O1 -g -I"$LIBOQS_PREFIX/include" -L"$LIBOQS_PREFIX/lib" -L"$LIBOQS_PREFIX/lib64")
+  oqs_run() {
+    cd "$ROOT/c" && cc "${C_FLAGS[@]}" liboqs_shared_key.c -o liboqs_shared_key -loqs -lpthread || return 1
+    for _ in $(seq "$RUNS"); do
+      TSAN_OPTIONS="halt_on_error=1" ./liboqs_shared_key || return 1
+    done
+    ! grep -q 'WARNING: ThreadSanitizer' "$OUT/liboqs.log"
+  }
+  stage "C liboqs ML-DSA-65 + ML-KEM-768 shared object+key (ThreadSanitizer)" liboqs.log oqs_run
+  c_canary() {
+    cd "$ROOT/c" && cc -fsanitize=thread -O1 -g tsan_canary.c -o tsan_canary -lpthread || return 1
+    ./tsan_canary
+    grep -q 'WARNING: ThreadSanitizer: data race' "$OUT/c-tsan-canary.log"
+  }
+  stage "C TSan positive control (canary must be caught)" c-tsan-canary.log c_canary
+elif [ "$want_oqs" = 1 ]; then row "C liboqs" "**FAIL**" "liboqs not found under $LIBOQS_PREFIX"; FAILED=1
+else row "C liboqs" SKIPPED "liboqs not found under $LIBOQS_PREFIX"; fi
 
 # ---- Rust --------------------------------------------------------------------
 if command -v cargo >/dev/null; then
@@ -99,6 +139,24 @@ if command -v javac >/dev/null && [ -n "$CP" ]; then
     stage "Java BC $(basename "$BCJAR" .jar | sed 's/.*-//') $alg (invariant)" "java-$alg.log" java_run
   done
 
+  # Misuse study: ONE Signature object shared without a lock. "shared" stages record how the
+  # library fails (PASS = harness ran and classified every operation); "locked" is the control
+  # and must show only ok.
+  mkdir -p "$ROOT/java/misuse-build"
+  if javac -nowarn -d "$ROOT/java/misuse-build" -cp "$CP" "$ROOT/java/misuse/BcSharedSignatureMisuse.java" >"$OUT/javac-misuse.log" 2>&1; then
+    for alg in $JAVA_ALGS; do
+      misuse() { # mode size
+        for _ in $(seq "$RUNS"); do
+          MISUSE_MSG_BYTES=$2 java -cp "$ROOT/java/misuse-build:$CP" BcSharedSignatureMisuse "$alg" "$1" || return 1
+        done
+      }
+      for size in $MISUSE_SIZES; do
+        stage "Java BC $alg shared Signature object, ${size}-byte msgs (misuse characterization)" "misuse-$alg-shared-$size.log" misuse shared "$size"
+      done
+      stage "Java BC $alg locked Signature object (misuse control, must be all ok)" "misuse-$alg-locked.log" misuse locked 65536
+    done
+  else row "Java misuse compile" "**FAIL**" javac-misuse.log; FAILED=1; fi
+
   want_jcs=${JCSTRESS:-auto}
   JCS=$(ls "$ROOT"/java/lib/jcstress-core-*.jar 2>/dev/null | head -1)
   if [ "$want_jcs" != 0 ] && [ -n "$JCS" ]; then
@@ -114,5 +172,6 @@ if command -v javac >/dev/null && [ -n "$CP" ]; then
   else row "JCStress" SKIPPED "jcstress-core jar not in java/lib"; fi
 else row "Java" SKIPPED "javac or Bouncy Castle jar missing"; fi
 
+{ echo; echo '## Measured numbers'; echo; echo '```'; cat "$DETAILS"; echo '```'; } >> "$SUMMARY"
 echo; echo "Summary: $SUMMARY"
 exit $FAILED
