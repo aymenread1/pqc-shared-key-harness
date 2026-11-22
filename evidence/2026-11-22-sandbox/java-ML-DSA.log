@@ -1,0 +1,9 @@
+openjdk version "21.0.13.0.3" 2026-10-24
+OpenJDK Runtime Environment (build 21.0.13.0.3+1-1-24.04.1-Ubuntu)
+OpenJDK 64-Bit Server VM (build 21.0.13.0.3+1-1-24.04.1-Ubuntu, mixed mode, sharing)
+bcprov: bcprov-jdk18on-1.78.1.jar
+Exception in thread "main" java.security.NoSuchAlgorithmException: no such algorithm: ML-DSA for provider BC
+	at java.base/sun.security.jca.GetInstance.getService(GetInstance.java:87)
+	at java.base/sun.security.jca.GetInstance.getInstance(GetInstance.java:206)
+	at java.base/java.security.KeyPairGenerator.getInstance(KeyPairGenerator.java:301)
+	at BcSharedKeyTest.main(BcSharedKeyTest.java:24)

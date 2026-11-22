@@ -1,0 +1,12 @@
+go version go1.24.7 linux/amd64
+=== RUN   TestSharedKeyMLKEM768
+    mlkem_race_test.go:60: shared-key ML-KEM-768: 16 goroutines x 500 ops, 0 mismatch, 0 fail
+--- PASS: TestSharedKeyMLKEM768 (3.96s)
+=== RUN   TestSharedKeyMLKEM768
+    mlkem_race_test.go:60: shared-key ML-KEM-768: 16 goroutines x 500 ops, 0 mismatch, 0 fail
+--- PASS: TestSharedKeyMLKEM768 (3.83s)
+=== RUN   TestSharedKeyMLKEM768
+    mlkem_race_test.go:60: shared-key ML-KEM-768: 16 goroutines x 500 ops, 0 mismatch, 0 fail
+--- PASS: TestSharedKeyMLKEM768 (3.82s)
+PASS
+ok  	pqcts	12.617s

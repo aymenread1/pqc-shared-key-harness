@@ -1,0 +1,4 @@
+rustc 1.97.0 (2d8144b78 2026-07-07)
+shared-key ML-KEM-768: 16 threads x 500 ops, mismatch=0 fail=0
+shared-key ML-KEM-768: 16 threads x 500 ops, mismatch=0 fail=0
+shared-key ML-KEM-768: 16 threads x 500 ops, mismatch=0 fail=0
