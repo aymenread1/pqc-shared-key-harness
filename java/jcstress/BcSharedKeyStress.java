@@ -4,6 +4,8 @@
 // Author: Ayman Alsadig Mohamed Suliman
 // Needs: jcstress-core 0.16 (+ jopt-simple), bcprov-jdk18on 1.79+. Run via ../../run-all.sh
 // (compile with -proc:full so the JCStress annotation processor runs).
+package pqc.jcstress;  // named package: JCStress generates helper classes next to the test
+
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.openjdk.jcstress.annotations.*;
 import org.openjdk.jcstress.infra.results.ZZ_Result;
