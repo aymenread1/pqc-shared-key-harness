@@ -1,0 +1,50 @@
+# Runs the full pinned harness on a GitHub-hosted runner (public repo: 4 vCPU / 16 GB, free).
+# Trigger manually: Actions tab -> "PQC shared-key harness" -> Run workflow.
+name: PQC shared-key harness
+
+on:
+  workflow_dispatch:
+    inputs:
+      threads:        { description: "Threads per harness", default: "32" }
+      ops:            { description: "Operations per thread", default: "2000" }
+      runs:           { description: "Repetitions per stage", default: "5" }
+      jcstress_mode:  { description: "JCStress mode (sanity|quick|default|tough)", default: "default" }
+
+permissions:
+  contents: read
+
+jobs:
+  harness:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Host info
+        run: nproc && free -h && uname -a
+
+      - name: Build pinned image
+        run: docker build -t pqc-harness .
+
+      - name: Run all harnesses
+        env:   # inputs go through env, never straight into the shell line
+          THREADS: ${{ inputs.threads }}
+          OPS: ${{ inputs.ops }}
+          RUNS: ${{ inputs.runs }}
+          JCSTRESS_MODE: ${{ inputs.jcstress_mode }}
+        run: |
+          mkdir -p results
+          docker run --rm -e THREADS -e OPS -e RUNS -e JCSTRESS_MODE \
+            -v "$PWD/results:/harness/results" pqc-harness
+
+      - name: Summary
+        if: always()
+        run: cat results/*/summary.md >> "$GITHUB_STEP_SUMMARY" || true
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pqc-harness-results
+          path: results/
+          retention-days: 90
