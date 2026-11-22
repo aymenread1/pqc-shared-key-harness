@@ -25,7 +25,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
-      ca-certificates curl git build-essential cmake ninja-build openjdk-21-jdk-headless maven \
+      ca-certificates curl git build-essential cmake ninja-build openjdk-21-jdk-headless maven python3 \
  && rm -rf /var/lib/apt/lists/*
 
 # Go (stdlib crypto/mlkem needs 1.24+)

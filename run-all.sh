@@ -40,7 +40,7 @@ stage() { # name logfile cmd...
   local name=$1 log=$2; shift 2
   local rc=0; ( "$@" ) >"$OUT/$log" 2>&1 || rc=1
   # keep the measured numbers visible in the CI summary, not only inside the log files
-  grep -hE '^RESULT|^SPI |shared-key [A-Za-z]|INVARIANT|CONTROL|HARNESS ERROR|first exception' "$OUT/$log" \
+  grep -hE '^RESULT|^SPI |^DEMO_JSON|shared-key [A-Za-z]|INVARIANT|CONTROL|HARNESS ERROR|first exception' "$OUT/$log" \
     | sed "s/^ *//; s/^/[$log] /" | tee -a "$DETAILS" || true
   if [ "$rc" = 0 ]; then row "$name" PASS "$log"
   else
@@ -126,6 +126,12 @@ if [ "$want_ossl" != 0 ] && [ -f "$OPENSSL_PREFIX/include/openssl/evp.h" ] && co
 elif [ "$want_ossl" = 1 ]; then row "C OpenSSL" "**FAIL**" "OpenSSL not found under $OPENSSL_PREFIX"; FAILED=1
 else row "C OpenSSL" SKIPPED "OpenSSL 3.5+ not found under $OPENSSL_PREFIX"; fi
 
+# ---- Scanner (pqc-share-scan) unit tests -----------------------------------------
+if command -v python3 >/dev/null; then
+  scan_tests() { cd "$ROOT" && python3 -m unittest discover -s scanner/tests -v; }
+  stage "pqc-share-scan unit tests" scanner-tests.log scan_tests
+else row "pqc-share-scan tests" SKIPPED "python3 not installed"; fi
+
 # ---- Rust --------------------------------------------------------------------
 if command -v cargo >/dev/null; then
   rust_run() {
@@ -202,6 +208,17 @@ if command -v javac >/dev/null && [ -n "$CP" ]; then
       stage "Java $label $salg misuse sweep, threads {$SWEEP_THREADS} x sizes {$SWEEP_SIZES}" "sweep-$label.log" sweep
     done
   else row "Java misuse compile" "**FAIL**" javac-misuse.log; FAILED=1; fi
+
+  # Bank-facing live demo: the same payment-signing service, vulnerable vs fixed, audited.
+  mkdir -p "$ROOT/demo/build"
+  if javac --release 21 -nowarn -d "$ROOT/demo/build" "$ROOT/demo/BankSigningDemo.java" >"$OUT/javac-demo.log" 2>&1; then
+    demo_bc() { DEMO_JSON="$OUT/demo-BC.json" java -cp "$ROOT/demo/build:$CP" BankSigningDemo ML-DSA BC; }
+    stage "Bank demo: payment signing service, BC ML-DSA (vulnerable vs fixed)" demo-BC.log demo_bc
+    if [ -x "$JDK25_HOME/bin/java" ]; then
+      demo_jdk() { DEMO_JSON="$OUT/demo-JDK.json" "$JDK25_HOME/bin/java" -cp "$ROOT/demo/build" BankSigningDemo ML-DSA SUN; }
+      stage "Bank demo: payment signing service, JDK ML-DSA (vulnerable vs fixed)" demo-JDK.log demo_jdk
+    fi
+  else row "Bank demo compile" "**FAIL**" javac-demo.log; FAILED=1; fi
 
   want_jcs=${JCSTRESS:-auto}
   JCS=$(ls "$ROOT"/java/lib/jcstress-core-*.jar 2>/dev/null | head -1)

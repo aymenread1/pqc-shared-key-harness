@@ -8,3 +8,5 @@ java/misuse-build/
 c/liboqs_shared_key
 c/tsan_canary
 c/openssl_shared
+demo/build/
+__pycache__/
