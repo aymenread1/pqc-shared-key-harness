@@ -8,6 +8,10 @@ ARG GO_VERSION=1.24.7
 ARG RUST_STABLE=1.97.0
 ARG RUST_NIGHTLY=nightly-2026-05-01
 ARG LIBOQS_VERSION=0.14.0
+ARG OPENSSL_VERSION=3.5.4
+# JDK 25 (LTS) supplies the JDK's own ML-DSA provider (JEP 497); "latest" GA build of 25,
+# the exact build is printed in every result line (java=...).
+ARG JDK25_URL=https://api.adoptium.net/v3/binary/latest/25/ga/linux/x64/jdk/hotspot/normal/eclipse
 
 ENV DEBIAN_FRONTEND=noninteractive \
     PATH=/usr/local/go/bin:/root/.cargo/bin:$PATH \
@@ -15,6 +19,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
     RUST_TSAN=1 \
     JCSTRESS=1 \
     LIBOQS=1 \
+    OPENSSL=1 \
+    JDK25=1 \
     CIRCL=1
 
 RUN apt-get update \
@@ -39,6 +45,18 @@ RUN git clone --depth 1 --branch "${LIBOQS_VERSION}" https://github.com/open-qua
       -DCMAKE_INSTALL_PREFIX=/opt/liboqs-tsan -DCMAKE_INSTALL_LIBDIR=lib \
  && cmake --build /tmp/liboqs/build && cmake --install /tmp/liboqs/build \
  && rm -rf /tmp/liboqs && ls /opt/liboqs-tsan/lib
+
+# OpenSSL 3.5 (native ML-DSA / ML-KEM), libcrypto only, built WITH ThreadSanitizer.
+RUN git clone --depth 1 --branch "openssl-${OPENSSL_VERSION}" https://github.com/openssl/openssl /tmp/openssl \
+ && cd /tmp/openssl \
+ && ./Configure linux-x86_64 --prefix=/opt/openssl-tsan --libdir=lib no-shared no-tests no-docs \
+      -fsanitize=thread -g \
+ && make -j"$(nproc)" build_libs && make install_dev \
+ && cd / && rm -rf /tmp/openssl && ls /opt/openssl-tsan/lib
+
+RUN mkdir -p /opt/jdk25 \
+ && curl -fsSL "${JDK25_URL}" | tar -xz -C /opt/jdk25 --strip-components=1 \
+ && /opt/jdk25/bin/java -version
 
 WORKDIR /harness
 COPY . .
