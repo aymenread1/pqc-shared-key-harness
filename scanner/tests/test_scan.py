@@ -56,6 +56,34 @@ class ScanCorpus(unittest.TestCase):
             self.assertIn(pair, cats)
 
 
+class Lookalikes(unittest.TestCase):
+    def test_types_that_only_end_with_an_engine_name_are_ignored(self):
+        src = ("@Service class B { private PDSignature pdSignature; private static XMac xmac; "
+               "private java.security.Signature real; }")
+        with tempfile.TemporaryDirectory() as d:
+            open(os.path.join(d, "B.java"), "w").write(src)
+            names = [f.message for f in s.scan(d).findings]
+        self.assertEqual(len(names), 1)
+        self.assertIn("'real'", names[0])
+
+
+class ImportResolution(unittest.TestCase):
+    def scan_src(self, src):
+        with tempfile.TemporaryDirectory() as d:
+            open(os.path.join(d, "C.java"), "w").write(src)
+            return s.scan(d).findings
+
+    def test_non_jca_signature_type_is_ignored(self):      # cglib / ASM have their own Signature class
+        self.assertEqual(self.scan_src("import org.springframework.cglib.core.Signature;\n"
+                                       "class C { private static final Signature COPY = null; }"), [])
+
+    def test_bare_name_without_import_is_ignored(self):
+        self.assertEqual(self.scan_src("package x; class C { private static Signature s; }"), [])
+
+    def test_wildcard_import_counts(self):
+        self.assertEqual(len(self.scan_src("import java.security.*;\nclass C { private static Signature s; }")), 1)
+
+
 class Cli(unittest.TestCase):
     def test_outputs_and_exit_code(self):
         with tempfile.TemporaryDirectory() as d:
