@@ -1,0 +1,281 @@
+# Measured numbers section of the job summary of CI run 7 (45069564563), copied verbatim.
+[go.log] mlkem_race_test.go:60: shared-key ML-KEM-768: 32 goroutines x 2000 ops, 0 mismatch, 0 fail
+[go.log] mlkem_race_test.go:60: shared-key ML-KEM-768: 32 goroutines x 2000 ops, 0 mismatch, 0 fail
+[go.log] mlkem_race_test.go:60: shared-key ML-KEM-768: 32 goroutines x 2000 ops, 0 mismatch, 0 fail
+[go.log] mlkem_race_test.go:60: shared-key ML-KEM-768: 32 goroutines x 2000 ops, 0 mismatch, 0 fail
+[go.log] mlkem_race_test.go:60: shared-key ML-KEM-768: 32 goroutines x 2000 ops, 0 mismatch, 0 fail
+[go-circl.log] circl_race_test.go:65: CIRCL shared-key ML-DSA-65: 32 goroutines x 2000 ops, 0 bad
+[go-circl.log] circl_race_test.go:108: CIRCL shared-key ML-KEM-768: 32 goroutines x 2000 ops, 0 mismatch, 0 fail
+[go-circl.log] circl_race_test.go:65: CIRCL shared-key ML-DSA-65: 32 goroutines x 2000 ops, 0 bad
+[go-circl.log] circl_race_test.go:108: CIRCL shared-key ML-KEM-768: 32 goroutines x 2000 ops, 0 mismatch, 0 fail
+[go-circl.log] circl_race_test.go:65: CIRCL shared-key ML-DSA-65: 32 goroutines x 2000 ops, 0 bad
+[go-circl.log] circl_race_test.go:108: CIRCL shared-key ML-KEM-768: 32 goroutines x 2000 ops, 0 mismatch, 0 fail
+[go-circl.log] circl_race_test.go:65: CIRCL shared-key ML-DSA-65: 32 goroutines x 2000 ops, 0 bad
+[go-circl.log] circl_race_test.go:108: CIRCL shared-key ML-KEM-768: 32 goroutines x 2000 ops, 0 mismatch, 0 fail
+[go-circl.log] circl_race_test.go:65: CIRCL shared-key ML-DSA-65: 32 goroutines x 2000 ops, 0 bad
+[go-circl.log] circl_race_test.go:108: CIRCL shared-key ML-KEM-768: 32 goroutines x 2000 ops, 0 mismatch, 0 fail
+[liboqs.log] liboqs 0.14.0 shared-key ML-DSA-65: 32 threads x 2000 ops, ok=64000 bad=0 err=0
+[liboqs.log] liboqs 0.14.0 shared-key ML-KEM-768: 32 threads x 2000 ops, ok=64000 mismatch=0 err=0
+[liboqs.log] liboqs 0.14.0 shared-key ML-DSA-65: 32 threads x 2000 ops, ok=64000 bad=0 err=0
+[liboqs.log] liboqs 0.14.0 shared-key ML-KEM-768: 32 threads x 2000 ops, ok=64000 mismatch=0 err=0
+[liboqs.log] liboqs 0.14.0 shared-key ML-DSA-65: 32 threads x 2000 ops, ok=64000 bad=0 err=0
+[liboqs.log] liboqs 0.14.0 shared-key ML-KEM-768: 32 threads x 2000 ops, ok=64000 mismatch=0 err=0
+[liboqs.log] liboqs 0.14.0 shared-key ML-DSA-65: 32 threads x 2000 ops, ok=64000 bad=0 err=0
+[liboqs.log] liboqs 0.14.0 shared-key ML-KEM-768: 32 threads x 2000 ops, ok=64000 mismatch=0 err=0
+[liboqs.log] liboqs 0.14.0 shared-key ML-DSA-65: 32 threads x 2000 ops, ok=64000 bad=0 err=0
+[liboqs.log] liboqs 0.14.0 shared-key ML-KEM-768: 32 threads x 2000 ops, ok=64000 mismatch=0 err=0
+[openssl-shared-key.log] RESULT provider=OpenSSL/3.5.4 alg=ML-DSA-65 mode=shared-key threads=32 ops=2000 msgBytes=64 total=64000 ok=64000 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[openssl-shared-key.log] OpenSSL 3.5.4 shared-key ML-KEM-768: 32 threads x 2000 ops, ok=64000 mismatch=0 err=0
+[openssl-shared-key.log] RESULT provider=OpenSSL/3.5.4 alg=ML-DSA-65 mode=shared-key threads=32 ops=2000 msgBytes=64 total=64000 ok=64000 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[openssl-shared-key.log] OpenSSL 3.5.4 shared-key ML-KEM-768: 32 threads x 2000 ops, ok=64000 mismatch=0 err=0
+[openssl-shared-key.log] RESULT provider=OpenSSL/3.5.4 alg=ML-DSA-65 mode=shared-key threads=32 ops=2000 msgBytes=64 total=64000 ok=64000 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[openssl-shared-key.log] OpenSSL 3.5.4 shared-key ML-KEM-768: 32 threads x 2000 ops, ok=64000 mismatch=0 err=0
+[openssl-shared-key.log] RESULT provider=OpenSSL/3.5.4 alg=ML-DSA-65 mode=shared-key threads=32 ops=2000 msgBytes=64 total=64000 ok=64000 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[openssl-shared-key.log] OpenSSL 3.5.4 shared-key ML-KEM-768: 32 threads x 2000 ops, ok=64000 mismatch=0 err=0
+[openssl-shared-key.log] RESULT provider=OpenSSL/3.5.4 alg=ML-DSA-65 mode=shared-key threads=32 ops=2000 msgBytes=64 total=64000 ok=64000 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[openssl-shared-key.log] OpenSSL 3.5.4 shared-key ML-KEM-768: 32 threads x 2000 ops, ok=64000 mismatch=0 err=0
+[openssl-locked-ctx.log] RESULT provider=OpenSSL/3.5.4 alg=ML-DSA-65 mode=locked-ctx threads=8 ops=300 msgBytes=64 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[openssl-locked-ctx.log] RESULT provider=OpenSSL/3.5.4 alg=ML-DSA-65 mode=locked-ctx threads=8 ops=300 msgBytes=64 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[openssl-locked-ctx.log] RESULT provider=OpenSSL/3.5.4 alg=ML-DSA-65 mode=locked-ctx threads=8 ops=300 msgBytes=64 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[openssl-locked-ctx.log] RESULT provider=OpenSSL/3.5.4 alg=ML-DSA-65 mode=locked-ctx threads=8 ops=300 msgBytes=64 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[openssl-locked-ctx.log] RESULT provider=OpenSSL/3.5.4 alg=ML-DSA-65 mode=locked-ctx threads=8 ops=300 msgBytes=64 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[openssl-shared-ctx.log] RESULT provider=OpenSSL/3.5.4 alg=ML-DSA-65 mode=shared-ctx threads=8 ops=300 msgBytes=64 total=2400 ok=0 loud=2397 invalid=3 crossValid=0 mixedValid=0 emptyMessage=0
+[openssl-shared-ctx.log] RESULT provider=OpenSSL alg=ML-DSA-65 mode=shared-ctx run=3 outcome=hang (killed after 300s)
+[openssl-shared-ctx.log] RESULT openssl shared-ctx runs=5 hangs=1 crashes=0 tsan_reports=77
+[rust.log] shared-key ML-KEM-768: 32 threads x 2000 ops, mismatch=0 fail=0
+[rust.log] shared-key ML-KEM-768: 32 threads x 2000 ops, mismatch=0 fail=0
+[rust.log] shared-key ML-KEM-768: 32 threads x 2000 ops, mismatch=0 fail=0
+[rust.log] shared-key ML-KEM-768: 32 threads x 2000 ops, mismatch=0 fail=0
+[rust.log] shared-key ML-KEM-768: 32 threads x 2000 ops, mismatch=0 fail=0
+[rust-tsan.log] shared-key ML-KEM-768: 32 threads x 2000 ops, mismatch=0 fail=0
+[rust-tsan.log] shared-key ML-KEM-768: 32 threads x 2000 ops, mismatch=0 fail=0
+[rust-tsan.log] shared-key ML-KEM-768: 32 threads x 2000 ops, mismatch=0 fail=0
+[rust-tsan.log] shared-key ML-KEM-768: 32 threads x 2000 ops, mismatch=0 fail=0
+[rust-tsan.log] shared-key ML-KEM-768: 32 threads x 2000 ops, mismatch=0 fail=0
+[java-ML-DSA.log] shared-key ML-DSA: 32 threads x 2000 ops (ran 64000), verifyFail=0 opFail=0
+[java-ML-DSA.log] shared-key ML-DSA: 32 threads x 2000 ops (ran 64000), verifyFail=0 opFail=0
+[java-ML-DSA.log] shared-key ML-DSA: 32 threads x 2000 ops (ran 64000), verifyFail=0 opFail=0
+[java-ML-DSA.log] shared-key ML-DSA: 32 threads x 2000 ops (ran 64000), verifyFail=0 opFail=0
+[java-ML-DSA.log] shared-key ML-DSA: 32 threads x 2000 ops (ran 64000), verifyFail=0 opFail=0
+[misuse-BC-shared-32.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2379 loud=11 invalid=7 crossValid=1 mixedValid=2 emptyMessage=2
+[misuse-BC-shared-32.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[misuse-BC-shared-32.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2385 loud=8 invalid=6 crossValid=0 mixedValid=1 emptyMessage=1
+[misuse-BC-shared-32.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 301 out of bounds for byte[192]
+[misuse-BC-shared-32.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2381 loud=11 invalid=7 crossValid=0 mixedValid=1 emptyMessage=1
+[misuse-BC-shared-32.log] first exception: java.lang.IllegalStateException: attempt to absorb while squeezing
+[misuse-BC-shared-32.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2374 loud=16 invalid=9 crossValid=0 mixedValid=1 emptyMessage=1
+[misuse-BC-shared-32.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[misuse-BC-shared-32.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2378 loud=12 invalid=6 crossValid=1 mixedValid=3 emptyMessage=0
+[misuse-BC-shared-32.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 272 out of bounds for byte[192]
+[misuse-BC-shared-65536.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=273 loud=1264 invalid=743 crossValid=1 mixedValid=119 emptyMessage=119
+[misuse-BC-shared-65536.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb while squeezing
+[misuse-BC-shared-65536.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=231 loud=1303 invalid=755 crossValid=0 mixedValid=111 emptyMessage=111
+[misuse-BC-shared-65536.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[misuse-BC-shared-65536.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=233 loud=1386 invalid=684 crossValid=0 mixedValid=97 emptyMessage=97
+[misuse-BC-shared-65536.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -536870576 is negative
+[misuse-BC-shared-65536.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=238 loud=1307 invalid=748 crossValid=0 mixedValid=107 emptyMessage=107
+[misuse-BC-shared-65536.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 200 out of bounds for byte[192]
+[misuse-BC-shared-65536.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=213 loud=1339 invalid=741 crossValid=0 mixedValid=107 emptyMessage=107
+[misuse-BC-shared-65536.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -536870576 is negative
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi$MLDSA fields:
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi fields: MLDSASigner signer; MLDSAParameters parameters;
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.util.BaseDeterministicOrRandomSignature fields: JcaJceHelper helper; AlgorithmParameterSpec originalSpec; AlgorithmParameters engineParams; ContextParameterSpec paramSpec; AsymmetricKeyParameter keyParams; boolean isInitState;
+[misuse-BC-locked.log] SPI java.security.Signature fields: String algorithm; Provider provider; int state;
+[misuse-BC-locked.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi$MLDSA fields:
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi fields: MLDSASigner signer; MLDSAParameters parameters;
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.util.BaseDeterministicOrRandomSignature fields: JcaJceHelper helper; AlgorithmParameterSpec originalSpec; AlgorithmParameters engineParams; ContextParameterSpec paramSpec; AsymmetricKeyParameter keyParams; boolean isInitState;
+[misuse-BC-locked.log] SPI java.security.Signature fields: String algorithm; Provider provider; int state;
+[misuse-BC-locked.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi$MLDSA fields:
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi fields: MLDSASigner signer; MLDSAParameters parameters;
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.util.BaseDeterministicOrRandomSignature fields: JcaJceHelper helper; AlgorithmParameterSpec originalSpec; AlgorithmParameters engineParams; ContextParameterSpec paramSpec; AsymmetricKeyParameter keyParams; boolean isInitState;
+[misuse-BC-locked.log] SPI java.security.Signature fields: String algorithm; Provider provider; int state;
+[misuse-BC-locked.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi$MLDSA fields:
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi fields: MLDSASigner signer; MLDSAParameters parameters;
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.util.BaseDeterministicOrRandomSignature fields: JcaJceHelper helper; AlgorithmParameterSpec originalSpec; AlgorithmParameters engineParams; ContextParameterSpec paramSpec; AsymmetricKeyParameter keyParams; boolean isInitState;
+[misuse-BC-locked.log] SPI java.security.Signature fields: String algorithm; Provider provider; int state;
+[misuse-BC-locked.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi$MLDSA fields:
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi fields: MLDSASigner signer; MLDSAParameters parameters;
+[misuse-BC-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.util.BaseDeterministicOrRandomSignature fields: JcaJceHelper helper; AlgorithmParameterSpec originalSpec; AlgorithmParameters engineParams; ContextParameterSpec paramSpec; AsymmetricKeyParameter keyParams; boolean isInitState;
+[misuse-BC-locked.log] SPI java.security.Signature fields: String algorithm; Provider provider; int state;
+[misuse-BC-locked.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=32 total=600 ok=575 loud=15 invalid=8 crossValid=0 mixedValid=2 emptyMessage=1
+[sweep-BC.log] first exception: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=32 total=600 ok=570 loud=17 invalid=13 crossValid=0 mixedValid=0 emptyMessage=0
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=32 total=600 ok=583 loud=9 invalid=8 crossValid=0 mixedValid=0 emptyMessage=0
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=1024 total=600 ok=510 loud=48 invalid=39 crossValid=2 mixedValid=1 emptyMessage=1
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=1024 total=600 ok=483 loud=64 invalid=50 crossValid=1 mixedValid=2 emptyMessage=2
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=1024 total=600 ok=445 loud=90 invalid=63 crossValid=0 mixedValid=2 emptyMessage=2
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb while squeezing
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=65536 total=600 ok=34 loud=288 invalid=276 crossValid=0 mixedValid=2 emptyMessage=2
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 336 out of bounds for byte[192]
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=65536 total=600 ok=36 loud=289 invalid=274 crossValid=1 mixedValid=0 emptyMessage=0
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: Index 536870746 out of bounds for length 192
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=65536 total=600 ok=42 loud=293 invalid=264 crossValid=1 mixedValid=0 emptyMessage=0
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=32 total=1200 ok=1170 loud=18 invalid=11 crossValid=0 mixedValid=1 emptyMessage=0
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 202 out of bounds for byte[192]
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=32 total=1200 ok=1167 loud=20 invalid=12 crossValid=0 mixedValid=1 emptyMessage=1
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=32 total=1200 ok=1163 loud=23 invalid=13 crossValid=0 mixedValid=1 emptyMessage=1
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: Index 536870778 out of bounds for length 192
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=1024 total=1200 ok=1039 loud=91 invalid=62 crossValid=3 mixedValid=5 emptyMessage=5
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=1024 total=1200 ok=1015 loud=102 invalid=79 crossValid=0 mixedValid=4 emptyMessage=4
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -133 is negative
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=1024 total=1200 ok=1025 loud=99 invalid=72 crossValid=1 mixedValid=3 emptyMessage=3
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 335 out of bounds for byte[192]
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=65536 total=1200 ok=51 loud=831 invalid=307 crossValid=0 mixedValid=11 emptyMessage=11
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=65536 total=1200 ok=70 loud=820 invalid=303 crossValid=0 mixedValid=7 emptyMessage=7
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=65536 total=1200 ok=59 loud=809 invalid=322 crossValid=1 mixedValid=9 emptyMessage=9
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2376 loud=12 invalid=10 crossValid=0 mixedValid=2 emptyMessage=2
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2373 loud=16 invalid=8 crossValid=0 mixedValid=3 emptyMessage=1
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2373 loud=14 invalid=10 crossValid=1 mixedValid=2 emptyMessage=1
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -136 is negative
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=1024 total=2400 ok=2249 loud=77 invalid=56 crossValid=0 mixedValid=18 emptyMessage=18
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=1024 total=2400 ok=2245 loud=82 invalid=60 crossValid=2 mixedValid=11 emptyMessage=11
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 336 out of bounds for byte[192]
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=1024 total=2400 ok=2217 loud=91 invalid=70 crossValid=0 mixedValid=22 emptyMessage=22
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=257 loud=1314 invalid=739 crossValid=0 mixedValid=90 emptyMessage=90
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb while squeezing
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=243 loud=1268 invalid=759 crossValid=0 mixedValid=130 emptyMessage=130
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=230 loud=1314 invalid=748 crossValid=1 mixedValid=107 emptyMessage=107
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=32 total=4800 ok=4788 loud=7 invalid=3 crossValid=0 mixedValid=2 emptyMessage=0
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=32 total=4800 ok=4772 loud=14 invalid=10 crossValid=0 mixedValid=4 emptyMessage=4
+[sweep-BC.log] first exception: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=32 total=4800 ok=4779 loud=10 invalid=8 crossValid=0 mixedValid=3 emptyMessage=3
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=1024 total=4800 ok=4655 loud=60 invalid=41 crossValid=1 mixedValid=43 emptyMessage=43
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=1024 total=4800 ok=4630 loud=79 invalid=55 crossValid=1 mixedValid=35 emptyMessage=35
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb while squeezing
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=1024 total=4800 ok=4601 loud=84 invalid=62 crossValid=1 mixedValid=52 emptyMessage=52
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb with odd length queue
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=65536 total=4800 ok=648 loud=1979 invalid=1800 crossValid=0 mixedValid=373 emptyMessage=373
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -133 is negative
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=65536 total=4800 ok=646 loud=1995 invalid=1824 crossValid=4 mixedValid=331 emptyMessage=331
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb while squeezing
+[sweep-BC.log] RESULT provider=BC/1.81 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=65536 total=4800 ok=685 loud=1974 invalid=1811 crossValid=0 mixedValid=330 emptyMessage=330
+[sweep-BC.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb while squeezing
+[misuse-BC-1.87-shared-32.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2286 loud=94 invalid=17 crossValid=1 mixedValid=2 emptyMessage=2
+[misuse-BC-1.87-shared-32.log] first exception: java.security.SignatureException: java.lang.NullPointerException: Cannot load from byte/boolean array because "<parameter1>" is null
+[misuse-BC-1.87-shared-32.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2314 loud=68 invalid=17 crossValid=0 mixedValid=1 emptyMessage=0
+[misuse-BC-1.87-shared-32.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[misuse-BC-1.87-shared-32.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2291 loud=86 invalid=20 crossValid=2 mixedValid=1 emptyMessage=1
+[misuse-BC-1.87-shared-32.log] first exception: java.security.SignatureException: java.lang.NullPointerException: Cannot load from byte/boolean array because "<parameter1>" is null
+[misuse-BC-1.87-shared-32.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2298 loud=82 invalid=17 crossValid=1 mixedValid=2 emptyMessage=2
+[misuse-BC-1.87-shared-32.log] first exception: java.security.SignatureException: java.lang.NullPointerException: Cannot load from byte/boolean array because "<parameter1>" is null
+[misuse-BC-1.87-shared-32.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2289 loud=86 invalid=22 crossValid=0 mixedValid=3 emptyMessage=3
+[misuse-BC-1.87-shared-32.log] first exception: java.security.SignatureException: java.lang.NullPointerException: Cannot load from byte/boolean array because "<parameter1>" is null
+[misuse-BC-1.87-shared-65536.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=214 loud=1365 invalid=708 crossValid=0 mixedValid=113 emptyMessage=113
+[misuse-BC-1.87-shared-65536.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[misuse-BC-1.87-shared-65536.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=215 loud=1342 invalid=725 crossValid=0 mixedValid=118 emptyMessage=118
+[misuse-BC-1.87-shared-65536.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[misuse-BC-1.87-shared-65536.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=244 loud=1346 invalid=705 crossValid=0 mixedValid=105 emptyMessage=105
+[misuse-BC-1.87-shared-65536.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[misuse-BC-1.87-shared-65536.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=236 loud=1336 invalid=729 crossValid=0 mixedValid=99 emptyMessage=99
+[misuse-BC-1.87-shared-65536.log] first exception: java.security.SignatureException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: length -168 is negative
+[misuse-BC-1.87-shared-65536.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=232 loud=1364 invalid=707 crossValid=0 mixedValid=97 emptyMessage=97
+[misuse-BC-1.87-shared-65536.log] first exception: java.security.SignatureException: java.lang.IllegalStateException: attempt to absorb while squeezing
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi$MLDSA fields:
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi fields: MLDSASigner signer; MLDSAParameters parameters;
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.util.BaseDeterministicOrRandomSignature fields: JcaJceHelper helper; AlgorithmParameterSpec originalSpec; AlgorithmParameters engineParams; ContextParameterSpec paramSpec; AsymmetricKeyParameter keyParams; boolean isInitState;
+[misuse-BC-1.87-locked.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi$MLDSA fields:
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi fields: MLDSASigner signer; MLDSAParameters parameters;
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.util.BaseDeterministicOrRandomSignature fields: JcaJceHelper helper; AlgorithmParameterSpec originalSpec; AlgorithmParameters engineParams; ContextParameterSpec paramSpec; AsymmetricKeyParameter keyParams; boolean isInitState;
+[misuse-BC-1.87-locked.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi$MLDSA fields:
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi fields: MLDSASigner signer; MLDSAParameters parameters;
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.util.BaseDeterministicOrRandomSignature fields: JcaJceHelper helper; AlgorithmParameterSpec originalSpec; AlgorithmParameters engineParams; ContextParameterSpec paramSpec; AsymmetricKeyParameter keyParams; boolean isInitState;
+[misuse-BC-1.87-locked.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi$MLDSA fields:
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi fields: MLDSASigner signer; MLDSAParameters parameters;
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.util.BaseDeterministicOrRandomSignature fields: JcaJceHelper helper; AlgorithmParameterSpec originalSpec; AlgorithmParameters engineParams; ContextParameterSpec paramSpec; AsymmetricKeyParameter keyParams; boolean isInitState;
+[misuse-BC-1.87-locked.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi$MLDSA fields:
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.mldsa.SignatureSpi fields: MLDSASigner signer; MLDSAParameters parameters;
+[misuse-BC-1.87-locked.log] SPI org.bouncycastle.jcajce.provider.asymmetric.util.BaseDeterministicOrRandomSignature fields: JcaJceHelper helper; AlgorithmParameterSpec originalSpec; AlgorithmParameters engineParams; ContextParameterSpec paramSpec; AsymmetricKeyParameter keyParams; boolean isInitState;
+[misuse-BC-1.87-locked.log] RESULT provider=BC/1.87 java=21.0.13.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[misuse-JDK-shared-32.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2393 loud=0 invalid=0 crossValid=0 mixedValid=7 emptyMessage=4
+[misuse-JDK-shared-32.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2388 loud=0 invalid=0 crossValid=1 mixedValid=11 emptyMessage=5
+[misuse-JDK-shared-32.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2390 loud=0 invalid=0 crossValid=3 mixedValid=7 emptyMessage=4
+[misuse-JDK-shared-32.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2389 loud=0 invalid=0 crossValid=2 mixedValid=9 emptyMessage=5
+[misuse-JDK-shared-32.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2388 loud=0 invalid=0 crossValid=1 mixedValid=11 emptyMessage=5
+[misuse-JDK-shared-65536.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=2208 loud=0 invalid=0 crossValid=6 mixedValid=186 emptyMessage=163
+[misuse-JDK-shared-65536.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=2148 loud=0 invalid=1 crossValid=17 mixedValid=234 emptyMessage=203
+[misuse-JDK-shared-65536.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=2192 loud=0 invalid=0 crossValid=13 mixedValid=195 emptyMessage=173
+[misuse-JDK-shared-65536.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=2151 loud=0 invalid=2 crossValid=20 mixedValid=227 emptyMessage=202
+[misuse-JDK-shared-65536.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=2160 loud=0 invalid=1 crossValid=10 mixedValid=229 emptyMessage=198
+[misuse-JDK-locked.log] SPI sun.security.provider.ML_DSA_Impls$SIG fields:
+[misuse-JDK-locked.log] SPI sun.security.provider.NamedSignature fields: String fname; NamedKeyFactory fac; ByteArrayOutputStream bout; String pname; byte[] secKey; byte[] pubKey; Object sk2; Object pk2;
+[misuse-JDK-locked.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[misuse-JDK-locked.log] SPI sun.security.provider.ML_DSA_Impls$SIG fields:
+[misuse-JDK-locked.log] SPI sun.security.provider.NamedSignature fields: String fname; NamedKeyFactory fac; ByteArrayOutputStream bout; String pname; byte[] secKey; byte[] pubKey; Object sk2; Object pk2;
+[misuse-JDK-locked.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[misuse-JDK-locked.log] SPI sun.security.provider.ML_DSA_Impls$SIG fields:
+[misuse-JDK-locked.log] SPI sun.security.provider.NamedSignature fields: String fname; NamedKeyFactory fac; ByteArrayOutputStream bout; String pname; byte[] secKey; byte[] pubKey; Object sk2; Object pk2;
+[misuse-JDK-locked.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[misuse-JDK-locked.log] SPI sun.security.provider.ML_DSA_Impls$SIG fields:
+[misuse-JDK-locked.log] SPI sun.security.provider.NamedSignature fields: String fname; NamedKeyFactory fac; ByteArrayOutputStream bout; String pname; byte[] secKey; byte[] pubKey; Object sk2; Object pk2;
+[misuse-JDK-locked.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[misuse-JDK-locked.log] SPI sun.security.provider.ML_DSA_Impls$SIG fields:
+[misuse-JDK-locked.log] SPI sun.security.provider.NamedSignature fields: String fname; NamedKeyFactory fac; ByteArrayOutputStream bout; String pname; byte[] secKey; byte[] pubKey; Object sk2; Object pk2;
+[misuse-JDK-locked.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=locked threads=8 ops=300 msgBytes=65536 total=2400 ok=2400 loud=0 invalid=0 crossValid=0 mixedValid=0 emptyMessage=0
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=32 total=600 ok=590 loud=0 invalid=0 crossValid=1 mixedValid=9 emptyMessage=5
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=32 total=600 ok=582 loud=0 invalid=0 crossValid=0 mixedValid=18 emptyMessage=4
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=32 total=600 ok=589 loud=0 invalid=0 crossValid=0 mixedValid=11 emptyMessage=6
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=1024 total=600 ok=587 loud=0 invalid=0 crossValid=0 mixedValid=13 emptyMessage=1
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=1024 total=600 ok=588 loud=0 invalid=0 crossValid=2 mixedValid=10 emptyMessage=8
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=1024 total=600 ok=585 loud=0 invalid=0 crossValid=4 mixedValid=11 emptyMessage=11
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=65536 total=600 ok=457 loud=0 invalid=0 crossValid=18 mixedValid=125 emptyMessage=117
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=65536 total=600 ok=478 loud=0 invalid=0 crossValid=4 mixedValid=118 emptyMessage=113
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=2 ops=300 msgBytes=65536 total=600 ok=457 loud=0 invalid=0 crossValid=21 mixedValid=122 emptyMessage=116
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=32 total=1200 ok=1195 loud=0 invalid=0 crossValid=1 mixedValid=4 emptyMessage=4
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=32 total=1200 ok=1190 loud=0 invalid=0 crossValid=2 mixedValid=8 emptyMessage=5
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=32 total=1200 ok=1187 loud=0 invalid=0 crossValid=3 mixedValid=10 emptyMessage=7
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=1024 total=1200 ok=1191 loud=0 invalid=1 crossValid=0 mixedValid=8 emptyMessage=3
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=1024 total=1200 ok=1185 loud=0 invalid=0 crossValid=1 mixedValid=14 emptyMessage=4
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=1024 total=1200 ok=1191 loud=0 invalid=0 crossValid=1 mixedValid=8 emptyMessage=6
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=65536 total=1200 ok=1001 loud=0 invalid=0 crossValid=28 mixedValid=171 emptyMessage=162
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=65536 total=1200 ok=1028 loud=0 invalid=0 crossValid=13 mixedValid=159 emptyMessage=147
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=4 ops=300 msgBytes=65536 total=1200 ok=1013 loud=0 invalid=1 crossValid=15 mixedValid=171 emptyMessage=158
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2381 loud=0 invalid=0 crossValid=2 mixedValid=17 emptyMessage=10
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2388 loud=0 invalid=0 crossValid=2 mixedValid=10 emptyMessage=8
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=32 total=2400 ok=2386 loud=0 invalid=0 crossValid=2 mixedValid=12 emptyMessage=5
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=1024 total=2400 ok=2390 loud=0 invalid=0 crossValid=0 mixedValid=10 emptyMessage=2
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=1024 total=2400 ok=2388 loud=0 invalid=0 crossValid=2 mixedValid=10 emptyMessage=9
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=1024 total=2400 ok=2386 loud=0 invalid=0 crossValid=1 mixedValid=13 emptyMessage=6
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=2198 loud=0 invalid=0 crossValid=15 mixedValid=187 emptyMessage=159
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=2158 loud=0 invalid=1 crossValid=21 mixedValid=220 emptyMessage=199
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=8 ops=300 msgBytes=65536 total=2400 ok=2161 loud=0 invalid=0 crossValid=8 mixedValid=231 emptyMessage=199
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=32 total=4800 ok=4786 loud=0 invalid=0 crossValid=1 mixedValid=13 emptyMessage=10
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=32 total=4800 ok=4789 loud=0 invalid=1 crossValid=0 mixedValid=10 emptyMessage=6
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=32 total=4800 ok=4793 loud=0 invalid=2 crossValid=1 mixedValid=4 emptyMessage=2
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=1024 total=4800 ok=4790 loud=0 invalid=0 crossValid=2 mixedValid=8 emptyMessage=4
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=1024 total=4800 ok=4793 loud=0 invalid=0 crossValid=2 mixedValid=5 emptyMessage=3
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=1024 total=4800 ok=4790 loud=0 invalid=0 crossValid=2 mixedValid=8 emptyMessage=7
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=65536 total=4800 ok=4506 loud=0 invalid=0 crossValid=9 mixedValid=285 emptyMessage=246
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=65536 total=4800 ok=4486 loud=0 invalid=0 crossValid=25 mixedValid=289 emptyMessage=247
+[sweep-JDK.log] RESULT provider=SUN/25 java=25.0.5.1 alg=ML-DSA sigLen=3309 mode=shared threads=16 ops=300 msgBytes=65536 total=4800 ok=4532 loud=0 invalid=0 crossValid=15 mixedValid=253 emptyMessage=226
+[demo-BC.log] DEMO_JSON {"algorithm":"ML-DSA","provider":"BC 1.81","java":"21.0.13.1","tellers":8,"ordersPerTeller":200,"orderBytes":4096,"vulnerable":{"ok":921,"error":334,"rejected":316,"otherCustomer":0,"unrequested":29,"empty":29,"total":1600,"ms":1895},"fixed":{"ok":1600,"error":0,"rejected":0,"otherCustomer":0,"unrequested":0,"empty":0,"total":1600,"ms":716}}
+[demo-BC-latest.log] DEMO_JSON {"algorithm":"ML-DSA","provider":"BC 1.87","java":"21.0.13.1","tellers":8,"ordersPerTeller":200,"orderBytes":4096,"vulnerable":{"ok":885,"error":407,"rejected":283,"otherCustomer":2,"unrequested":23,"empty":23,"total":1600,"ms":1805},"fixed":{"ok":1600,"error":0,"rejected":0,"otherCustomer":0,"unrequested":0,"empty":0,"total":1600,"ms":664}}
+[demo-JDK.log] DEMO_JSON {"algorithm":"ML-DSA","provider":"SUN 25","java":"25.0.5.1","tellers":8,"ordersPerTeller":200,"orderBytes":4096,"vulnerable":{"ok":1590,"error":0,"rejected":0,"otherCustomer":0,"unrequested":10,"empty":3,"total":1600,"ms":768},"fixed":{"ok":1600,"error":0,"rejected":0,"otherCustomer":0,"unrequested":0,"empty":0,"total":1600,"ms":370}}
+
